@@ -49,7 +49,7 @@ interface NavigationItem {
   href?: string;
 }
 
-export const HOST = 'https://www.spotit.page';
+export const HOST = 'https://www.tunease.com';
 
 export const GA_TRACKING_ID = 'UA-147652451-2';
 
@@ -138,24 +138,24 @@ export const data: Data[] = [
     textColor: 'black',
     text: ['Searching is so easy', 'Highlight a text', 'Right click and search'],
   },
-  {
-    src: '/images/lyric.png',
-    title: '🎶 Lyric',
-    reverse: false,
-    color: 'moss',
-    spotifyTextColor: 'purple',
-    textColor: 'black',
-    text: ['Click the microphone icon on the player', 'Or select "🎶 Lyric" from the extension menu'],
-  },
-  {
-    src: '/images/sign-in.png',
-    title: 'Sign in',
-    reverse: true,
-    color: 'purple',
-    spotifyTextColor: 'green',
-    textColor: 'white',
-    text: ['with your Spotify account'],
-  },
+  // {
+  //   src: '/images/lyric.png',
+  //   title: '🎶 Lyric',
+  //   reverse: false,
+  //   color: 'moss',
+  //   spotifyTextColor: 'purple',
+  //   textColor: 'black',
+  //   text: ['Click the microphone icon on the player', 'Or select "🎶 Lyric" from the extension menu'],
+  // },
+  // {
+  //   src: '/images/sign-in.png',
+  //   title: 'Sign in',
+  //   reverse: true,
+  //   color: 'purple',
+  //   spotifyTextColor: 'green',
+  //   textColor: 'white',
+  //   text: ['with your Spotify account'],
+  // },
   {
     src: '/images/app-not-running.png',
     title: 'App not running',
@@ -252,6 +252,6 @@ export const NAVIGATION: Navigation = {
 };
 
 export const META_DESCRIPTION =
-  'The Spotit is a music extension compatible with Spotify that allows the user seamlessly play/pause/like or jump to previous or next track while surfing the web without having to navigate to the Spotify user interface';
+  'Controlling Spotify while working or browsing can be distracting, requiring you to switch windows and lose focus. With our simple extension, you can effortlessly control playback without leaving your current tab.';
 
 export const LOGO = 'logo.png';

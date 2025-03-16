@@ -4,18 +4,18 @@ import { META_DESCRIPTION } from '@/utils/constants';
 import '../globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.spotit.page'),
-  title: 'Spotit - A music extension compatible with Spotify',
+  metadataBase: new URL('https://www.tunease.com'),
+  title: 'TuneEase - Helps you control music while using Spotify',
   description: META_DESCRIPTION,
   icons: {
     icon: [{ url: '/favicon.ico' }],
     apple: [{ url: '/favicon.ico' }],
   },
   openGraph: {
-    images: [{ url: '/spotit-logo.png' }],
+    images: [{ url: '/tunease-logo.png' }],
   },
   twitter: {
-    images: [{ url: '/spotit-logo.png' }],
+    images: [{ url: '/tunease-logo.png' }],
   },
 };
 

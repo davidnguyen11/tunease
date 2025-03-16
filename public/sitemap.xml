@@ -5,18 +5,18 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://www.spotit.page/</loc>
-    <lastmod>2021-10-19T06:11:53+00:00</lastmod>
+    <loc>https://www.tunease.com/</loc>
+    <lastmod>2025-03-16T08:51:26+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://www.spotit.page/privacy-policy</loc>
-    <lastmod>2021-10-19T06:11:53+00:00</lastmod>
-    <priority>0.80</priority>
+    <loc>https://www.tunease.com/privacy-policy</loc>
+    <lastmod>2025-03-16T08:51:26+00:00</lastmod>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://www.spotit.page/contact</loc>
-    <lastmod>2021-10-19T06:11:53+00:00</lastmod>
-    <priority>0.80</priority>
+    <loc>https://www.tunease.com/contact</loc>
+    <lastmod>2025-03-16T08:51:26+00:00</lastmod>
+    <priority>1.00</priority>
   </url>
 </urlset>

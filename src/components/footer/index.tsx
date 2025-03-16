@@ -7,18 +7,18 @@ const data = [
     href: 'https://twitter.com/davidnguyen121',
     text: 'Twitter',
   },
-  // {
-  //   href: '/privacy-policy',
-  //   text: 'Privacy Policy',
-  // },
+  {
+    href: '/privacy-policy',
+    text: 'Privacy Policy',
+  },
   {
     href: '/contact',
     text: 'Contact',
   },
-  // {
-  //   href: 'https://www.reddit.com/r/spotifyextension/',
-  //   text: 'Bug report 🐞',
-  // },
+  {
+    href: 'https://www.reddit.com/r/spotifyextension/',
+    text: 'Bug report 🐞',
+  },
 ];
 
 export const Footer = () => {
