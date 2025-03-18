@@ -2,6 +2,7 @@ import type { Metadata, NextPage } from 'next';
 
 import { Header } from '@/components/header';
 import { data, NAVIGATION } from '@/utils/constants';
+import { Footer } from '@/components/footer';
 
 const { contact } = NAVIGATION;
 
@@ -54,6 +55,7 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

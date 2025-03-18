@@ -15,10 +15,6 @@ const data = [
     href: '/contact',
     text: 'Contact',
   },
-  {
-    href: 'https://www.reddit.com/r/spotifyextension/',
-    text: 'Bug report 🐞',
-  },
 ];
 
 export const Footer = () => {

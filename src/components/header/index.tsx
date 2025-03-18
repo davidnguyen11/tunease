@@ -14,7 +14,7 @@ function classNames(...classes: string[]) {
 
 export function Header(props: Props) {
   const { bgColor, textColor } = props;
-  const { whatDoesItLookLike, installation, buyMeACoffee, followMe } = NAVIGATION;
+  const { whatDoesItLookLike, installation, buyMeACoffee, followMe, connectWithSpotify } = NAVIGATION;
   const white = '#fff';
   const black = '#000';
 
@@ -53,31 +53,20 @@ export function Header(props: Props) {
       ),
     },
     {
-      id: followMe.id,
-      name: followMe.text,
-      href: followMe.href,
+      id: connectWithSpotify.id,
+      name: connectWithSpotify.text,
+      href: connectWithSpotify.href,
       current: false,
       icon: (
-        <svg
-          style={svgStyle}
-          className="inline-block mr-1"
-          width={15}
-          height={15}
-          x="0px"
-          y="0px"
-          viewBox="0 0 512 512"
-        >
+        <svg style={svgStyle} className="inline-block mr-1" width={15} height={15} viewBox="0 0 24 24">
           <g>
             <g>
               <path
-                d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
-			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
-			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
-			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
-			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
-			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
-			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
-			C480.224,136.96,497.728,118.496,512,97.248z"
+                d="M5.9,24c-1.6,0-3.1-0.6-4.2-1.7C0.6,21.2,0,19.7,0,18.1c0-1.6,0.6-3.1,1.7-4.2l3.8-3.8l2,2l2.8-2.8l1.4,1.4l-2.8,2.8
+			l1.6,1.6l2.8-2.8l1.4,1.4l-2.8,2.8l2,2l-3.7,3.8C9,23.3,7.5,24,5.9,24z M5.5,12.9l-2.3,2.3C2.4,16,2,17,2,18s0.4,2,1.2,2.8
+			c1.5,1.5,4.1,1.5,5.6,0l2.3-2.4L5.5,12.9z M18.5,13.9l-8.4-8.4l3.7-3.8C14.9,0.6,16.5,0,18,0c1.5,0,3,0.6,4.2,1.7
+			C23.4,2.8,24,4.3,24,5.9s-0.6,3.1-1.7,4.2L18.5,13.9z M13,5.5l5.5,5.5l2.3-2.3C21.6,7.9,22,7,22,5.9c0-1-0.4-2-1.2-2.8
+			c-1.5-1.5-4-1.5-5.6,0L13,5.5z"
               />
             </g>
           </g>
@@ -147,11 +136,7 @@ export function Header(props: Props) {
               <div className="flex-1 flex items-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <a href="/">
-                    <img
-                      className="ml-4 lg:block h-9 w-auto"
-                      src="/spotify-extension-64x64.png"
-                      alt="TuneEase Exntesion"
-                    />
+                    <img className="ml-4 lg:block h-9 w-auto" src="/tunease-3.png" alt="TuneEase Exntesion" />
                   </a>
                   <span className={`ml-4 font-bold text-lg text-${textColor}`}>TuneEase</span>
                 </div>

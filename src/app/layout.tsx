@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Footer } from '@/components/footer';
 import { META_DESCRIPTION } from '@/utils/constants';
 import '../globals.css';
+import { WrapperQueryClient } from '@/providers/wrapper-query-client';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tunease.com'),
@@ -27,9 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        <Footer />
-        <script src={`https://cdn.jsdelivr.net/npm/@statsig/js-client@latest/build/statsig-js-client+session-replay+web-analytics.min.js?apikey=${process.env.STATSIG_CLIENT_KEY}`}></script>
+        <WrapperQueryClient>{children}</WrapperQueryClient>
+        <script
+          src={`https://cdn.jsdelivr.net/npm/@statsig/js-client@latest/build/statsig-js-client+session-replay+web-analytics.min.js?apikey=${process.env.STATSIG_CLIENT_KEY}`}
+        ></script>
       </body>
     </html>
   );

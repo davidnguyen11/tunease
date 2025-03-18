@@ -2,6 +2,7 @@ import type { Metadata, NextPage } from 'next';
 
 import { Header } from '@/components/header';
 import { data, NAVIGATION } from '@/utils/constants';
+import { Footer } from '@/components/footer';
 
 const { privacyPolicy } = NAVIGATION;
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const PrivacyPolicy: NextPage = () => {
-  const slideIndex = 1;
+  const slideIndex = 3;
   const currentElement = data[slideIndex];
   const bgColor = `bg-${currentElement.color}`;
   const textColor = `${currentElement.textColor}`;
@@ -24,13 +25,12 @@ const PrivacyPolicy: NextPage = () => {
             <div className={`text-center text-3xl md:text-4xl`}>
               <strong className="bg-clip-text text-transparent bg-kyeMeh">{privacyPolicy.text}</strong>
             </div>
-            <div className="text-lg mt-10">
-              TuneEase Privacy Policies.
-            </div>
+            <div className="text-lg mt-10">TuneEase Privacy Policies.</div>
             <div className="text-lg mt-10">
               <strong>I. Introduction</strong>
               <p>
-                TuneEase is a lightweight music controller that enhances your listening experience by allowing you to play, pause, like, or skip tracks while browsing the web—without switching to the Spotify app.
+                TuneEase is a lightweight music controller that enhances your listening experience by allowing you to
+                play, pause, like, or skip tracks while browsing the web—without switching to the Spotify app.
               </p>
             </div>
 
@@ -45,6 +45,7 @@ const PrivacyPolicy: NextPage = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

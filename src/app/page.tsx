@@ -9,6 +9,7 @@ import { ScreenShotDescription } from '@/components/screenshot-description';
 import { PricingCard } from '@/components/pricing-card';
 import { data, stores, NAVIGATION, HOST, META_DESCRIPTION, LOGO } from '@/utils/constants';
 import { Donation } from '@/components/donation';
+import { Footer } from '@/components/footer';
 
 const { motivation, whatDoesItLookLike, installation, buyMeACoffee } = NAVIGATION;
 
@@ -63,7 +64,8 @@ const Home: NextPage = () => {
               <strong className="bg-clip-text text-transparent bg-night">{motivation.text}</strong>
             </div>
             <div className="text-lg mt-10 text-black">
-              Controlling Spotify while working or browsing can be distracting, requiring you to switch windows and lose focus. With our simple extension, you can effortlessly control playback without leaving your current tab.
+              Controlling Spotify while working or browsing can be distracting, requiring you to switch windows and lose
+              focus. With our simple extension, you can effortlessly control playback without leaving your current tab.
             </div>
           </div>
         </div>
@@ -112,6 +114,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

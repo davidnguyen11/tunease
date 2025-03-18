@@ -41,7 +41,8 @@ type NavigationKey =
   | 'qr'
   | 'followMe'
   | 'privacyPolicy'
-  | 'contact';
+  | 'contact'
+  | 'connectWithSpotify';
 
 interface NavigationItem {
   text: string;
@@ -198,24 +199,24 @@ export const jpPayments: Payment[] = [banks.paypay];
 export const payments: Payment[] = [banks.momo, banks.techcombank, banks.tpbank];
 
 export const stores: StoreInfo[] = [
-  {
-    image: '/stores/chrome.png',
-    title: 'Chrome',
-    href: 'https://chrome.google.com/webstore/detail/spotify-player/bhdjjppbnlpjpeicimhemencfgjeldoa',
-    downloads: '70k+',
-  },
+  // {
+  //   image: '/stores/chrome.png',
+  //   title: 'Chrome',
+  //   href: 'https://chrome.google.com/webstore/detail/spotify-player/bhdjjppbnlpjpeicimhemencfgjeldoa',
+  //   downloads: '70k+',
+  // },
   {
     image: '/stores/firefox.png',
     title: 'Firefox',
-    href: 'https://addons.mozilla.org/en-US/firefox/addon/spotit',
-    downloads: '2k+',
+    href: 'https://addons.mozilla.org/en-US/firefox/addon/tunease',
+    downloads: '68',
   },
-  {
-    image: '/stores/edge.png',
-    title: 'Edge',
-    href: 'https://microsoftedge.microsoft.com/addons/detail/spotify-player/odplfjpibjdajlmaocmfmlcdidldlmnk',
-    downloads: '20k+',
-  },
+  // {
+  //   image: '/stores/edge.png',
+  //   title: 'Edge',
+  //   href: 'https://microsoftedge.microsoft.com/addons/detail/spotify-player/odplfjpibjdajlmaocmfmlcdidldlmnk',
+  //   downloads: '20k+',
+  // },
 ];
 
 export const NAVIGATION: Navigation = {
@@ -248,6 +249,10 @@ export const NAVIGATION: Navigation = {
   buyMeACoffee: {
     text: 'Buy me a coffee',
     id: 'buy-me-a-coffee',
+  },
+  connectWithSpotify: {
+    text: 'Connect with Spotify',
+    href: '/auth/spotify',
   },
 };
 
