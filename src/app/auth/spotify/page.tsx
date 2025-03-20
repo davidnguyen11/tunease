@@ -56,7 +56,10 @@ const Container = () => {
               <span>Connect with Spotify</span>
             </a>
           ) : (
-            <h1 className="text-4xl text-center">🎉 Successfully authorized with Spotify!</h1>
+            <div className="flex flex-col text-center">
+              <span className='text-4xl'>🎉 Spotify authorization successful!</span>
+              <span className='italic'>You can now use the extension to control your music.</span>
+            </div>
           )}
         </div>
       </main>
