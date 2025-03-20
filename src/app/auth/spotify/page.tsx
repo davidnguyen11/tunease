@@ -1,7 +1,6 @@
 'use client';
 
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import { useSearchParams } from 'next/navigation';
 import { Header } from '@/components/header';
 import { data } from '@/utils/constants';
@@ -28,9 +27,6 @@ const Container = () => {
 
   return (
     <div className="flex flex-col flex-1">
-      <Head>
-        <title>TuneEase - Connect with Spotify</title>
-      </Head>
       <Header bgColor={bgColor} textColor={textColor} />
       <main className="flex bg-atlas flex-col justify-center flex-1">
         <div className="flex justify-center">

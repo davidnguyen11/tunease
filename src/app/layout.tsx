@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Footer } from '@/components/footer';
 import { META_DESCRIPTION } from '@/utils/constants';
 import '../globals.css';
 import { WrapperQueryClient } from '@/providers/wrapper-query-client';
@@ -31,7 +30,7 @@ export default function RootLayout({
         <WrapperQueryClient>{children}</WrapperQueryClient>
         <script
           src={`https://cdn.jsdelivr.net/npm/@statsig/js-client@latest/build/statsig-js-client+session-replay+web-analytics.min.js?apikey=${process.env.STATSIG_CLIENT_KEY}`}
-        ></script>
+        />
       </body>
     </html>
   );
