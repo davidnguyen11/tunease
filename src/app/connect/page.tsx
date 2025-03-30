@@ -7,9 +7,21 @@ import { data } from '@/utils/constants';
 import { Suspense, useEffect } from 'react';
 import { useSpotifyAuthUrl } from '@/hooks/useSpotifyAuthUrl';
 import { useSpotifyAccessToken } from '@/hooks/useSpotifyAccessToken';
+import { OverrideSpotifyOptions } from '@/auth-flow';
+
+const BORROW_CLIENT_ID = process.env.NEXT_PUBLIC_SPOTIFY_TEMP_CLIENT_ID ?? '';
+const SCOPES = process.env.NEXT_PUBLIC_SPOTIFY_TEMP_SCOPE ?? '';
+const REDIRECT_URI = process.env.NEXT_PUBLIC_SPOTIFY_TEMP_REDIRECT_URI ?? '';
+
+const options: OverrideSpotifyOptions = {
+  scopes: SCOPES,
+  clientId: BORROW_CLIENT_ID,
+  redirectUri: REDIRECT_URI,
+};
 
 const Container = () => {
-  const { authUrl } = useSpotifyAuthUrl();
+  const { authUrl } = useSpotifyAuthUrl(options);
+
   const searchParams = useSearchParams();
   const slideIndex = 0;
   const currentElement = data[slideIndex];
@@ -21,7 +33,7 @@ const Container = () => {
 
   useEffect(() => {
     if (codeParam) {
-      mutation.mutate({ code: codeParam });
+      mutation.mutate({ code: codeParam, options });
     }
   }, [codeParam]);
 

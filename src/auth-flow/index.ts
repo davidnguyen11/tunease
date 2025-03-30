@@ -14,17 +14,27 @@ const SPOTIFY_REDIRECT_URI = process.env.NEXT_PUBLIC_SPOTIFY_REDIRECT_URI;
 
 export const VERIFIER_LENGTH = 128;
 
-export async function getToAuthCodeFlowUrl(verifier: string) {
+export interface OverrideSpotifyOptions {
+  scopes: string;
+  clientId: string;
+  redirectUri: string;
+}
+
+export async function getToAuthCodeFlowUrl(verifier: string, options?: OverrideSpotifyOptions) {
   if (!SPOTIFY_REDIRECT_URI || !CLIENT_ID) {
     throw Error('Missing env vars');
   }
   const challenge = await generateCodeChallenge(verifier);
   const params = new URLSearchParams();
 
-  params.append('client_id', CLIENT_ID);
+  const clientId = options?.clientId ?? CLIENT_ID;
+  const scope = options?.scopes ?? permissions.join(',');
+  const redirectUri = options?.redirectUri ?? SPOTIFY_REDIRECT_URI;
+
+  params.append('client_id', clientId);
   params.append('response_type', 'code');
-  params.append('redirect_uri', SPOTIFY_REDIRECT_URI);
-  params.append('scope', permissions.join(','));
+  params.append('redirect_uri', redirectUri);
+  params.append('scope', scope);
   params.append('code_challenge_method', 'S256');
   params.append('code_challenge', challenge);
 
