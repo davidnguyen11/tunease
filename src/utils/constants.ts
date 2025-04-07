@@ -199,12 +199,12 @@ export const jpPayments: Payment[] = [banks.paypay];
 export const payments: Payment[] = [banks.momo, banks.techcombank, banks.tpbank];
 
 export const stores: StoreInfo[] = [
-  // {
-  //   image: '/stores/chrome.png',
-  //   title: 'Chrome',
-  //   href: 'https://chrome.google.com/webstore/detail/spotify-player/bhdjjppbnlpjpeicimhemencfgjeldoa',
-  //   downloads: '70k+',
-  // },
+  {
+    image: '/stores/chrome.png',
+    title: 'Chrome',
+    href: 'https://chrome.google.com/webstore/detail/spotify-player/bhdjjppbnlpjpeicimhemencfgjeldoa',
+    downloads: '70k+',
+  },
   {
     image: '/stores/firefox.png',
     title: 'Firefox',
