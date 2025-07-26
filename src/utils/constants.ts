@@ -203,7 +203,7 @@ export const stores: StoreInfo[] = [
     image: '/stores/chrome.png',
     title: 'Chrome',
     href: 'https://chrome.google.com/webstore/detail/spotify-player/bhdjjppbnlpjpeicimhemencfgjeldoa',
-    downloads: '70k+',
+    downloads: '30k+',
   },
   {
     image: '/stores/firefox.png',
@@ -211,12 +211,12 @@ export const stores: StoreInfo[] = [
     href: 'https://addons.mozilla.org/en-US/firefox/addon/tunease',
     downloads: '68',
   },
-  // {
-  //   image: '/stores/edge.png',
-  //   title: 'Edge',
-  //   href: 'https://microsoftedge.microsoft.com/addons/detail/spotify-player/odplfjpibjdajlmaocmfmlcdidldlmnk',
-  //   downloads: '20k+',
-  // },
+  {
+    image: '/stores/edge.png',
+    title: 'Edge',
+    href: 'https://microsoftedge.microsoft.com/addons/detail/spotify-player/odplfjpibjdajlmaocmfmlcdidldlmnk',
+    downloads: '10k+',
+  },
 ];
 
 export const NAVIGATION: Navigation = {
